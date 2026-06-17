@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+html {
+    min-height: 100vh;
+    min-width: 100vh;
+    margin: 0;
+    background: linear-gradient(150deg, #7C44C2 0%, #7C44C2 48.55%, rgba(76, 48, 29, 0.20) 181.77%);
+    font-family: "Fredoka";
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+}
+
+body,
+div,
+main,
+header,
+nav {
+    background: transparent !important;
+}
+
+.HeaderContainer {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 32px;
+    margin-left: 32px;
+
+    justify-content: left;
+    gap: 20vh;
+    align-items: center;
+}
+
+.Footer {
+    background: #562E89;
+    margin: 0px;
+}
+
+.HeaderLink {
+    color: #FFB600;
+    font-size: 30px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.PetabitHeaderLogo {
+    width: 197px;
+    height: 135px;
+    aspect-ratio: 197/135;
+    border-radius: 46px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.menunavegacao {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.contatocontent {
+    display: flex;
+    justify-content: center;
+}
+
+.ContactContainer {
+    display: flex;
+    justify-content: center;
+    gap: 23vh;
+}
+
+.ZapMailContainer {
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    width: 313px;
+    border-radius: 64px;
+    padding: 20px;
+
+    background: #562E89 !important;
+    text-align: center;
+}
+
+.ZapMailValue {
+    font-size: 6px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.SugestionBox {
+    width: 648px;
+    justify-self: center;
+    margin-top: 32px;
+    display: flex;
+    padding: 20px 20px 20px 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: -10px;
+    border-radius: 8px;
+    background: #562E89 !important;
+}
+
+.sugestiontop {
+    align-self: center;
+}
+
+.sugest-center-div {
+    justify-self: left;
+    align-self: stretch;
+}
+
+.InputNome,
+.InputEmail,
+.InputSugest {
+    display: flex;
+    height: 10px;
+    width: 80%;
+    padding: 6px 16px;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    border: 2px solid #878787;
+    background: #FFF;
+}
