@@ -1,0 +1,275 @@
+/* --- VARIÁVEIS DE COR --- */
+:root {
+    --roxo-fundo: #7C44C2;
+    /* Roxo mais claro do fundo da página */
+    --roxo-escuro: #562E89;
+    /* Roxo escuro da caixa do formulário e dos cards */
+    --amarelo-pet: #FFE44D;
+    /* Amarelo do botão */
+    --amarelo-titulo: #FFB600;
+    /* Amarelo do título e do header */
+    --branco: #ffffff;
+    --vermelho-lixeira: #ef4444;
+    /* Vermelho do ícone de deletar */
+}
+
+/* --- RESET BÁSICO --- */
+body {
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(150deg, #7C44C2 0%, #7C44C2 48.55%, rgba(76, 48, 29, 0.20) 181.77%);
+    gap: 30px;
+    color: #fff;
+
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+}
+
+/* --- ESTILO DO CABEÇALHO (HEADER) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Empurra a logo para a esquerda e o menu para a direita */
+    align-items: center;
+    /* Alinha tudo no centro verticalmente */
+    padding: 20px 5%;
+    /* Espaçamento interno */
+}
+
+/* Ajuste o tamanho da logo */
+.logo img {
+    height: 120px;
+    /* Ajuste esse valor conforme o tamanho que quiser a logo */
+    border-radius: 20px;
+    /* Se a sua imagem não tiver o fundo arredondado do Figma, isso ajuda */
+}
+
+/* --- ESTILO DA NAVEGAÇÃO --- */
+nav ul {
+    display: flex;
+    /* Coloca os links um ao lado do outro */
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    gap: 40px;
+    /* Espaço entre os links */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    /* Remove o sublinhado azul padrão dos links */
+    color: var(--amarelo-titulo);
+    /* O amarelo dos textos (ajuste para o hex exato do seu Figma) */
+    font-size: 20px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+    /* Dá um leve efeitinho ao passar o mouse */
+}
+
+/* --- SEÇÃO DO FORMULÁRIO (Meio - Parte Superior) --- */
+.secao-criacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.titulo-amarelo {
+    color: var(--amarelo-titulo);
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.caixa-formulario {
+    background-color: var(--roxo-escuro);
+    padding: 35px;
+    border-radius: 12px;
+    /* Borda arredondada suave */
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.grupo-input label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    /* Deixa os inputs bem arredondados como na imagem */
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.grupo-input textarea {
+    border-radius: 15px;
+    /* Textarea um pouco menos arredondada para ficar melhor */
+    resize: vertical;
+    /* Permite ao usuário apenas aumentar para baixo */
+    min-height: 120px;
+}
+
+.btn-enviar {
+    background-color: var(--amarelo-pet);
+    color: var(--roxo-escuro);
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 40px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 25px auto 0;
+    /* Empurra para baixo e centraliza */
+    transition: transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.05);
+    /* Efeito sutil ao passar o mouse */
+}
+
+/* --- SEÇÃO DO FEED DE POSTS (Meio - Parte Inferior) --- */
+.secao-feed {
+    padding: 40px 10%;
+    /* O 10% garante que os cards não encostem nas bordas da tela */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Uma linha bem sutil dividindo as seções */
+}
+
+/* A Mágica do Grid de 3 Colunas */
+.grid-de-cards {
+    display: grid;
+    /* Isso cria colunas flexíveis: no PC ficam 3 lado a lado, no celular cai para 1 sozinha */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    /* Espaço entre os cards */
+    margin-top: 20px;
+}
+
+/* --- ESTILO DOS CARDS (Que o JS vai injetar depois) --- */
+.post-card {
+    background-color: var(--roxo-escuro);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+}
+
+.post-card .conteudo {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e2e8f0;
+    /* Um branco levemente acinzentado para leitura confortável */
+    flex-grow: 1;
+    /* Se os textos tiverem tamanhos diferentes, isso empurra o rodapé pro fundo igual para todos */
+    margin-bottom: 25px;
+}
+
+.post-rodape {
+    display: flex;
+    justify-content: space-between;
+    /* Autor de um lado, lixeira do outro */
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+}
+
+.post-autor {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-deletar {
+    background: none;
+    border: none;
+    color: var(--vermelho-lixeira);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+.btn-deletar:hover {
+    transform: scale(1.2);
+}
+
+/* Esconde o botão do menu no computador */
+.menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVIDADE: CELULARES E TABLETS PEQUENOS --- */
+@media (max-width: 768px) {
+
+    /* 1. Mostra o ícone do menu sanduíche */
+    .menu-mobile {
+        display: block;
+    }
+
+    /* 2. Ajusta o header para a logo ficar de um lado e o menu do outro */
+    header {
+        justify-content: space-between;
+        gap: 0;
+        /* Tira o gap que usamos no PC */
+    }
+
+    /* 3. Esconde a lista horizontal padrão e prepara ela para ser vertical */
+    nav ul {
+        display: none;
+        /* Escondido por padrão no celular */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        /* Ajuste para descer abaixo do seu header */
+        left: 0;
+        width: 100%;
+        background-color: #4c2882;
+        /* Roxo escuro para o fundo do menu aberto */
+        padding: 20px 0;
+        text-align: center;
+        gap: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 4. Esta classe será adicionada pelo JavaScript quando clicarem no botão */
+    nav ul.ativo {
+        display: flex;
+    }
+}
