@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fredoka', sans-serif;}
+    font-family: 'Fredoka', sans-serif;
+}
 
 body {
     background: linear-gradient(to bottom, #7d3bc4, #5a26a6);
@@ -40,7 +41,7 @@ nav a {
 }
 
 main {
-    flex: 1; 
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +81,7 @@ main {
     font-size: 1.5rem;
     line-height: 1.4;
     font-weight: bold;
-    text-align: right; 
+    text-align: right;
 }
 
 footer {
@@ -92,7 +93,8 @@ footer {
     font-size: 0.9rem;
 }
 
-.footer-links h4, .footer-social h4 {
+.footer-links h4,
+.footer-social h4 {
     color: #fff;
     margin-bottom: 10px;
     font-weight: bold;
@@ -111,6 +113,16 @@ footer {
 .footer-social .icons {
     display: flex;
     gap: 15px;
-    font-size: 1.5rem;
+    align-items: center;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
 }
