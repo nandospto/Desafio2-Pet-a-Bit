@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,46 +10,79 @@
 
 <body>
     <header>
-        <div class="HeaderContainer">
-            <img class="PetabitHeaderLogo" src="/src/PetabitheaderLogo.png" alt="Logo Petabit">
-            <nav class="menunavegacao">
-                <a class="HeaderLink" href="#">Início</a>
-                <a class="HeaderLink" href="#">Solução</a>
-                <a class="HeaderLink" href="#">Blog</a>
-                <a class="HeaderLink" href="#">Contato</a>
-            </nav>
-        </div>
+        <img class="PetabitHeaderLogo" src="src/PetabitheaderLogo.png">
+        <nav class="menunavegacao">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+            <label for="menu-toggle" class="menu-btn">&#9776;</label>
+            <div class="menu-links-container">
+                <div class="menuContImg">
+                    <img class="imgpatinhas" src="/src/patinhas.png">
+                    <a class="HeaderLink" href="#">Início</a>
+                </div>
+                <div class="menuContImg">
+                    <img class="imgpatinhas" src="/src/patinhas.png">
+                    <a class="HeaderLink" href="#">Solução</a>
+                </div>
+                <div class="menuContImg">
+                    <img class="imgpatinhas" src="/src/patinhas.png">
+                    <a class="HeaderLink" href="#">Blog</a>
+                </div>
+                <div class="menuContImg">
+                    <img class="imgpatinhas" src="/src/patinhas.png">
+                    <a class="HeaderLink" href="#">Contato</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <div class="contatocontent">
-        <div>
-            <div class="ContactContainer">
-                <div class="ZapMailContainer">
-                    <h1>Entre em Contato</h1>
-                    <a class="ZapMailValue" href="#"><img src="src/ContatoZap.png" style="width: 32px; height:32px;"><h1>(8X) X XXXX-XXXX</h1></a>
-                </div>
-                <div class="ZapMailContainer">
-                    <h1>Trabalhe Conosco</h1>
-                    <a class="ZapMailValue" href="#"><img src="src/ContatoMail.png" style="width: 32; height:23px;"><h1>(8X) X XXXX-XXXX</h1></a>
-                </div>
+    <div class="ContatoContainerGeral">
+        <div class="ContactContainerZapMail">
+            <div class="ZapMailContainer">
+                <h1>Entre em Contato</h1>
+                <a class="ZapMailValue" href="#"><img src="src/ContatoZap.png" style="width: 32px; height:32px;">
+                    <h2>(8X) X XXXX-XXXX</h2>
+                </a>
             </div>
-            <div class="SugestionBox">
-                <div class="sugestiontop">Sugestões? Dúvidas?</div>
-                <div class="sugest-center-div">
-                <div>Seu Nome:</div>
-                <input id="InputNome" class="InputNome"></input>
-                <div>Endereço de Email:</div>
-                <input id="InputEmail" class="InputEmail"></input>
-                <div>Sua sugestão:</div>
-                <input id="InputSugest" class="InputSugest"></input>
-                </div>
+            <div class="ZapMailContainer">
+                <h1>Trabalhe Conosco</h1>
+                <a class="ZapMailValue" href="#"><img src="src/ContatoMail.png" style="width: 32; height:23px;">
+                    <h2>petabit@email.com</h2>
+                </a>
             </div>
+        </div>
+        <div class="SugestionBox">
+            <div class="sugestiontop">Sugestões? Dúvidas?</div>
+            <div class="sugest-center-div">
+                <label>Seu Nome:</label>
+                <input id="InputNome" class="InputNome">
+                <label>Endereço de Email:</label>
+                <input id="InputEmail" class="InputEmail">
+                <label>Sua sugestão:</label>
+                <textarea id="InputSugest" class="InputSugest"></textarea>
+            </div>
+            <button class="ButtonSugestionEnviar">Enviar</button>
         </div>
     </div>
 
-    <footer class="Footer">
-        <div class="FooterContainer">
-            <div>Footer</div>
+    <footer>
+        <div class="footer-links">
+            <div class="footer-about">
+                <h4>Pet-a-Bit</h4>
+                <ul>
+                    <li><a href="#">Solução</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Saiba Mais</h4>
+                <div class="icons">
+                    <a><img src="src/Instagram.svg"></a>
+                    <a><img src="src/Youtube.svg"></a>
+                    <a><img src="src/Facebook.svg"></a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
