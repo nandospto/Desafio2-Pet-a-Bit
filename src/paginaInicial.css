@@ -29,7 +29,7 @@ header {
     height: 100px;
     border-radius: 46px;
     object-fit: contain;
-    background-color: lightgray; 
+    background-color: rgb(255, 255, 255); 
 }
 
 .menunavegacao {
@@ -201,11 +201,10 @@ footer {
 
 
 @media (max-width: 768px) {
-    .PetabitHeaderLogo {
+
+    .PetabitFooterLogo {
         width: 50%;
         height: auto;
-        border-radius: 46px;
-        background-color: lightgray;
     }
 
     .menu-btn {
@@ -213,7 +212,6 @@ footer {
         font-size: 30px;
         color: #FFB600;
         cursor: pointer;
-        user-select: none;
     }
 
     .menu-links-container {
@@ -226,43 +224,20 @@ footer {
         border-radius: 12px;
         padding: 20px;
         gap: 16px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         z-index: 10;
     }
 
-    .menu-checkbox:checked~.menu-links-container {
+    .menu-checkbox:checked ~ .menu-links-container {
         display: flex;
-    }
-
-    .menu-checkbox {
-        display: none;
     }
 
     .hero {
         flex-direction: column;
-        gap: 30px;
-    }
-
-    .hero-image {
-        justify-content: center;
-    }
-
-    .hero-image img {
-        margin-left: 0;
-        margin-top: 0;
-        max-width: 90%;
-    }
-
-    .hero-text {
-        margin-top: 0;
     }
 
     .hero-text p {
         text-align: center;
-        font-size: 1.2rem;
     }
-
-    @media (max-width: 768px) {
 
     footer {
         padding: 30px 20px;
@@ -271,17 +246,12 @@ footer {
     .footer-links {
         flex-direction: column;
         align-items: center;
-        text-align: center;
         gap: 35px;
+        text-align: center;
     }
 
     .footer-about,
     .footer-social {
         align-items: center;
-    }
-
-    .footer-social .icons {
-        justify-content: center;
-    }
     }
 }
