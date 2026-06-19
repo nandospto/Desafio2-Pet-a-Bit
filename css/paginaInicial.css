@@ -18,24 +18,20 @@ body {
 
 
 header {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 60px 0 60px;
+    justify-content: space-between;
+    padding: 28px 28px 0;
 }
 
-.PetabitHeaderLogo {
-    width: 132px;
-    height: 100px;
+.logo img {
+    width: auto;
+    height: 120px;
     border-radius: 46px;
     object-fit: contain;
-    background-color: rgb(255, 255, 255); 
-}
-
-.menunavegacao {
-    display: flex;
-    list-style: none;
-    gap: 40px;
 }
 
 .menu-checkbox,
@@ -45,8 +41,8 @@ header {
 
 .menu-links-container {
     display: flex;
-    flex-direction: row;
-    gap: 32px;
+    list-style: none;
+    gap: 40px;
 }
 
 .menuContImg {
@@ -54,18 +50,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
-nav a.HeaderLink {
+nav a {
     text-decoration: none;
-    color: #FFB600;
-    font-weight: 500;
+    color: var(--amarelo-titulo);
+    font-weight: 800;
     font-size: 1.3rem;
-    position: relative;
     z-index: 2;
 }
 
+/* O efeito das patinhas */
 .imgpatinhas {
     position: absolute;
     top: 50%;
@@ -82,7 +77,6 @@ nav a.HeaderLink {
 .menuContImg:hover .imgpatinhas {
     opacity: 0.5;
 }
-
 
 main {
     flex: 1;
@@ -130,75 +124,60 @@ main {
 
 
 
-footer {
-    margin-top: auto;
-    width: 100%;
-    background-color: #3b1875;
-    padding: 25px 40px;
-}
-
-.footer-links {
-    max-width: 900px;
-    margin: 0 auto;
-
+.footer {
+    background-color: #5b2d8b;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
+    gap: 110px;
+    padding: 18px 32px;
+    margin-top: auto;
+    /* Mantém o footer colado na base */
 }
 
-.footer-about,
-.footer-social {
-    display: flex;
-    flex-direction: column;
+.footer-links p,
+.footer-social p {
+    color: #d9c7f2;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    /* Dá um espacinho entre o título e os links */
 }
 
-.footer-about h4,
-.footer-social h4 {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.footer-about ul {
-    list-style: none;
-}
-
-.footer-about li {
-    margin-bottom: 8px;
-}
-
-.footer-about a {
+.footer a {
+    color: #d9c7f2;
+    font-size: 12px;
+    font-weight: 800;
     text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    transition: 0.3s;
+    display: block;
+    line-height: 1.8;
+    /* Dá um respiro entre um link e outro */
 }
 
-.footer-about a:hover {
-    opacity: 0.8;
-}
-
-.footer-social {
-    align-items: center;
-}
-
-.footer-social .icons {
+.social-icons {
     display: flex;
-    gap: 18px;
+    gap: 8px;
+    align-items: center;
+    margin-top: 8px;
 }
 
-.footer-social .icons img {
-    width: 32px;
-    height: 32px;
+.social-icons img {
+    width: 24px;
+    height: 24px;
     object-fit: contain;
-    transition: 0.3s;
+    display: block;
+    transition: transform 0.2s;
+    /* Efeito suave no hover */
 }
 
-.footer-social .icons img:hover {
-    transform: scale(1.1);
+.social-icons img:hover {
+    transform: scale(1.2);
 }
 
+#header-container,
+#footer-container {
+    display: contents;
+}
 
 @media (max-width: 768px) {
 
