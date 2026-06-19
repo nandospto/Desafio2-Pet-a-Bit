@@ -217,6 +217,21 @@ nav a.HeaderLink {
     justify-items: normal;
 }
 
+.success-box-hidden {
+    display: none !important;
+}
+
+.SugestionBox .sugest-center-div-success {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    min-height: 248px; 
+}
+
 .ButtonSugestionEnviar {
     margin-top: 10px;
     align-self: center;
@@ -232,6 +247,9 @@ nav a.HeaderLink {
     border: 0;
     border-radius: 16px;
     background: #FFE44D;
+
+    cursor: pointer; 
+    transition: background 0.1s ease, color 0.1s ease;
 }
 
 .ButtonSugestionEnviar:hover {
