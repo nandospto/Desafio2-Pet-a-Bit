@@ -17,7 +17,7 @@ body {
 }
 
 /* header */
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,11 +81,11 @@ nav a.HeaderLink {
 
 .menuContImg:hover .imgpatinhas {
     opacity: 0.5;
-}
+} */
 
 
 /* footer */
-.footer {
+/* .footer {
     background-color: #5b2d8b;
 
     display: flex;
@@ -123,7 +123,7 @@ nav a.HeaderLink {
 
     object-fit: contain;
     display: block;
-}
+} */
 
 /*  */
 /* Fim do header e footer */
