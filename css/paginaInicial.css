@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(150deg, #7C44C2 0%, #7C44C2 48.55%, rgba(76, 48, 29, 0.20) 181.77%);
+    gap: 30px;
+    color: #fff;
+}
+
+
+header {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 28px 0;
+}
+
+.logo img {
+    width: auto;
+    height: 120px;
+    border-radius: 46px;
+    object-fit: contain;
+}
+
+.menu-checkbox,
+.menu-btn {
+    display: none;
+}
+
+.menu-links-container {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.menuContImg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--amarelo-titulo);
+    font-weight: 800;
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
+.imgpatinhas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.menuContImg:hover .imgpatinhas {
+    opacity: 0.5;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    margin-left: -80px;
+    margin-top: -80px;
+}
+
+.hero-text {
+    flex: 1;
+    margin-top: -80px;
+}
+
+.hero-text p {
+    color: #fca311;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+
+.footer {
+    background-color: #5b2d8b;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 110px;
+    padding: 18px 32px;
+    margin-top: auto;
+}
+
+.footer-links p,
+.footer-social p {
+    color: #d9c7f2;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #d9c7f2;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    display: block;
+    line-height: 1.8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+#header-container,
+#footer-container {
+    display: contents;
+}
+
+@media (max-width: 768px) {
+
+    .PetabitFooterLogo {
+        width: 50%;
+        height: auto;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 30px;
+        color: #FFB600;
+        cursor: pointer;
+    }
+
+    .menu-links-container {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 140px;
+        right: 32px;
+        background-color: #562E89;
+        border-radius: 12px;
+        padding: 20px;
+        gap: 16px;
+        z-index: 10;
+    }
+
+    .menu-checkbox:checked ~ .menu-links-container {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text p {
+        text-align: center;
+    }
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .footer-about,
+    .footer-social {
+        align-items: center;
+    }
+}

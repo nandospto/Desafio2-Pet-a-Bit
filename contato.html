@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Pet a Bit</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="js/componentes.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <div class="ContatoContainerGeral">
+        <div class="ContactContainerZapMail">
+            <div class="ZapMailContainer">
+                <h1>Entre em Contato</h1>
+                <a class="ZapMailValue" href="#"><img src="img/ContatoZap.png" style="width: 32px; height:32px;">
+                    <h2>(8X) X XXXX-XXXX</h2>
+                </a>
+            </div>
+            <div class="ZapMailContainer">
+                <h1>Trabalhe Conosco</h1>
+                <a class="ZapMailValue" href="#"><img src="img/ContatoMail.png" style="width: 32; height:23px;">
+                    <h2>petabit@email.com</h2>
+                </a>
+            </div>
+        </div>
+        <div id="SugestionBox" class="SugestionBox">
+            <div class="sugestiontop">Sugestões? Dúvidas?</div>
+            <div class="sugest-center-div">
+                <label>Seu Nome:</label>
+                <input id="InputNome" class="InputNome">
+                <label>Endereço de Email:</label>
+                <input id="InputEmail" class="InputEmail">
+                <label>Sua sugestão:</label>
+                <textarea id="InputSugest" class="InputSugest"></textarea>
+            </div>
+            <button class="ButtonSugestionEnviar" onclick="EnviarSugestao()">Enviar</button>
+        </div>
+        <div id="SuccessBox" class="SugestionBox success-box-hidden">
+            <div class="sugestiontop">Sugestões? Dúvidas?</div>
+            <div class="sugest-center-div-success">
+                <p style="font-weight: 700; font-size: 1.2rem; margin-bottom: 8px;">Obrigado!</p>
+                <p style="font-size: 0.9rem; color: #d9c7f2;">Sua sugestão foi enviada com sucesso.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+    <script src="js/contato.js"></script>
+    <script src="js/componentes.js"></script>
+</body>
+
+</html>

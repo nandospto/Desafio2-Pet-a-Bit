@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Pet a Bit</title>
+    <link rel="stylesheet" href="css/blog.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+    <main>
+        <section class="secao-criacao">
+            <h1 class="titulo-amarelo">Compartilhe a Sua Experiência:</h1>
+
+            <div class="caixa-formulario">
+                <form id="post-form">
+
+                    <div class="grupo-input">
+                        <label for="author">Seu nome:</label>
+                        <input type="text" id="author" name="author" placeholder="Nome" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="title">Título:</label>
+                        <input type="text" id="title" name="title" placeholder="Título" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="content">Conteúdo:</label>
+                        <textarea id="content" name="content" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="secao-feed">
+
+            <div id="blog-posts" class="grid-de-cards">
+            </div>
+
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="js/blog.js"></script>
+    <script src="js/componentes.js"></script>
+</body>
+
+</html>
