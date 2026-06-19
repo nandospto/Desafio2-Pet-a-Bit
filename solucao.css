@@ -80,6 +80,35 @@ body {
   font-weight: 900;
 }
 
+.menuContImg {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuContImg span {
+  position: relative;
+  z-index: 2;
+}
+
+.imgpatinhas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.menuContImg:hover .imgpatinhas {
+  opacity: 0.5;
+}
+
 .menu a.active {
   color: #FFB600;
 }
