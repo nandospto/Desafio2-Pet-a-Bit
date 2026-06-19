@@ -27,10 +27,24 @@ header {
     border-radius: 30px;
 }
 
-nav ul {
+/* Oculta os itens de menu mobile na versão desktop */
+.menu-checkbox,
+.menu-btn {
+    display: none;
+}
+
+.menu-links-container {
     display: flex;
     list-style: none;
     gap: 40px;
+}
+
+/* Container de cada link precisa ser relativo para prender a imagem absoluta */
+.menuContImg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav a {
@@ -38,6 +52,7 @@ nav a {
     color: #fca311;
     font-weight: 800;
     font-size: 1.3rem;
+    z-index: 2; /* Garante que o texto fique acima da pata */
 }
 
 main {
@@ -125,4 +140,21 @@ footer {
 
 .social-icon:hover {
     transform: scale(1.2);
+}
+
+.imgpatinhas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+    pointer-events: none; /* Garante que a imagem não atrapalhe o clique no link */
+}
+
+.menuContImg:hover .imgpatinhas {
+    opacity: 0.5;
 }

@@ -7,7 +7,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="paginaInicial.css">
@@ -15,24 +14,38 @@
 
 <body>
 
-    <header>
+     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo Pet-a-Bit">
+            <img class="PetabitHeaderLogo" src="logo.png" alt="Logo Pet-a-Bit">
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Solução</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
+        <nav class="menunavegacao">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-btn">&#9776;</label>
+            
+            <ul class="menu-links-container">
+                <li class="menuContImg">
+                    <img class="imgpatinhas" src="patinhas.png" alt="">
+                    <a class="HeaderLink" href="#">Início</a>
+                </li>
+                <li class="menuContImg">
+                    <img class="imgpatinhas" src="patinhas.png" alt="">
+                    <a class="HeaderLink" href="#">Solução</a>
+                </li>
+                <li class="menuContImg">
+                    <img class="imgpatinhas" src="patinhas.png" alt="">
+                    <a class="HeaderLink" href="#">Blog</a>
+                </li>
+                <li class="menuContImg">
+                    <img class="imgpatinhas" src="patinhas.png" alt="">
+                    <a class="HeaderLink" href="#">Contato</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-
             <div class="hero-image">
                 <img src="caoEGato.png" alt="Cão e Gato juntos">
             </div>
@@ -46,17 +59,14 @@
                     seguros e acessíveis para todos.
                 </p>
             </div>
-
         </section>
 
         <div class="paws-bg"></div>
     </main>
 
     <footer>
-
         <div class="footer-links">
             <h4>Pet-a-Bit</h4>
-
             <ul>
                 <li><a href="#">Solução</a></li>
                 <li><a href="#">Blog</a></li>
@@ -66,30 +76,18 @@
 
         <div class="footer-social">
             <h4>Saiba Mais</h4>
-
             <div class="icons">
-
                 <a href="https://www.instagram.com" target="_blank">
-                    <img src="Instagram.svg"
-                         alt="Instagram"
-                         class="social-icon">
+                    <img src="Instagram.svg" alt="Instagram" class="social-icon">
                 </a>
-
                 <a href="https://www.youtube.com" target="_blank">
-                    <img src="Youtube.svg"
-                         alt="YouTube"
-                         class="social-icon">
+                    <img src="Youtube.svg" alt="YouTube" class="social-icon">
                 </a>
-
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="Facebook.svg"
-                         alt="Facebook"
-                         class="social-icon">
+                    <img src="Facebook.svg" alt="Facebook" class="social-icon">
                 </a>
-
             </div>
         </div>
-
     </footer>
 
 </body>
