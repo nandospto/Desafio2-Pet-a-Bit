@@ -26,7 +26,7 @@ header {
 
 .PetabitHeaderLogo {
     width: 132px;
-    height: 100px;
+    height: auto;
     border-radius: 46px;
     object-fit: contain;
     background-color: lightgray;
