@@ -44,9 +44,9 @@ function displayPosts(posts) {
             <p class="conteudo">${post.content}</p>
             <div class="post-rodape">
                 <div class="post-autor">
-                    <img src="/img/usuario.png" alt="Usuário"> <span>${post.author}</span>
+                    <img src="img/usuario.png" alt="Usuário"> <span>${post.author}</span>
                 </div>
-                <button class="btn-deletar" onclick="deletePost('${post.id}')"><img src="/img/deletar.png" alt="Deletar"></button>
+                <button class="btn-deletar" onclick="deletePost('${post.id}')"><img src="img/deletar.png" alt="Deletar"></button>
             </div>
         </div>
     `).join('');
