@@ -60,7 +60,6 @@ nav a {
     z-index: 2;
 }
 
-/* O efeito das patinhas */
 .imgpatinhas {
     position: absolute;
     top: 50%;
@@ -132,7 +131,6 @@ main {
     gap: 110px;
     padding: 18px 32px;
     margin-top: auto;
-    /* Mantém o footer colado na base */
 }
 
 .footer-links p,
@@ -141,7 +139,6 @@ main {
     font-size: 12px;
     font-weight: 800;
     margin-bottom: 10px;
-    /* Dá um espacinho entre o título e os links */
 }
 
 .footer a {
@@ -151,7 +148,6 @@ main {
     text-decoration: none;
     display: block;
     line-height: 1.8;
-    /* Dá um respiro entre um link e outro */
 }
 
 .social-icons {
@@ -167,7 +163,6 @@ main {
     object-fit: contain;
     display: block;
     transition: transform 0.2s;
-    /* Efeito suave no hover */
 }
 
 .social-icons img:hover {
