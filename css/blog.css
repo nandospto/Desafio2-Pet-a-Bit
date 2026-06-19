@@ -1,4 +1,3 @@
-/* --- RESET GERAL E VARIÁVEIS --- */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@
     --roxo-escuro: #562E89;
     --amarelo-pet: #FFE44D;
     --amarelo-titulo: #fca311;
-    /* Atualizado para o tom de laranja/amarelo do seu amigo */
     --branco: #ffffff;
     --vermelho-lixeira: #ef4444;
 }
@@ -19,7 +17,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Mantive o seu degradê original que é mais fiel ao Figma */
     background: linear-gradient(150deg, #7C44C2 0%, #7C44C2 48.55%, rgba(76, 48, 29, 0.20) 181.77%);
     gap: 30px;
     color: var(--branco);
@@ -36,7 +33,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Garante logo na esquerda e menu na direita */
     padding: 28px 28px 0;
 }
 
@@ -228,7 +224,7 @@ nav a {
 }
 
 /* =========================================
-   3. RODAPÉ (FOOTER DO AMIGO)
+   3. RODAPÉ
 ========================================= */
 .footer {
     background-color: #5b2d8b;
@@ -238,7 +234,6 @@ nav a {
     gap: 110px;
     padding: 18px 32px;
     margin-top: auto;
-    /* Mantém o footer colado na base */
 }
 
 .footer-links p,
@@ -247,7 +242,6 @@ nav a {
     font-size: 12px;
     font-weight: 800;
     margin-bottom: 10px;
-    /* Dá um espacinho entre o título e os links */
 }
 
 .footer a {
@@ -257,7 +251,6 @@ nav a {
     text-decoration: none;
     display: block;
     line-height: 1.8;
-    /* Dá um respiro entre um link e outro */
 }
 
 .social-icons {
@@ -273,7 +266,6 @@ nav a {
     object-fit: contain;
     display: block;
     transition: transform 0.2s;
-    /* Efeito suave no hover */
 }
 
 .social-icons img:hover {
@@ -293,14 +285,11 @@ nav a {
     header {
         padding: 20px;
         position: relative;
-        /* Transforma o header na "âncora" do menu flutuante */
         display: flex;
         justify-content: space-between;
-        /* Logo na esquerda, botão na direita */
         align-items: center;
     }
 
-    /* Reduz um pouco a logo apenas no celular para o botão caber do lado */
     .logo img {
         height: 70px;
         width: auto;
@@ -313,16 +302,12 @@ nav a {
         color: var(--amarelo-titulo);
     }
 
-    /* A mágica da caixa centralizada */
     .menu-links-container {
         display: none;
         position: absolute;
         top: 100px;
-        /* Desce o menu para não cobrir a logo */
         left: 5%;
-        /* Cria margem na esquerda */
         width: 90%;
-        /* Ocupa quase a tela toda, mantendo margens */
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -331,14 +316,12 @@ nav a {
         border-radius: 15px;
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
         z-index: 999;
-        /* Garante que o menu abra por cima do formulário */
     }
 
     .menu-checkbox:checked~.menu-links-container {
         display: flex;
     }
 
-    /* Cards no Celular (Força alinhamento em 1 coluna) */
     .secao-feed {
         padding: 30px 20px;
     }
@@ -347,7 +330,6 @@ nav a {
         grid-template-columns: 1fr !important;
     }
 
-    /* Footer no Celular */
     .footer {
         flex-direction: column;
         align-items: center;

@@ -5,7 +5,6 @@ const API_KEY = 'key-32xxva5agp';
 // --- 1. GET: BUSCAR OS POSTS ---
 async function getPosts() {
     try {
-        // O "fetch" é o nosso garçom indo na cozinha buscar os dados
         const response = await fetch(API_URL, {
             method: 'GET',
             headers: {
@@ -19,7 +18,6 @@ async function getPosts() {
         // Transforma a resposta em um formato que o JS entende (JSON)
         const posts = await response.json();
 
-        // Manda os posts para a função que vai desenhar eles na tela
         displayPosts(posts);
     } catch (error) {
         console.error('Erro ao buscar posts:', error);
@@ -53,7 +51,6 @@ function displayPosts(posts) {
 }
 
 // --- 3. POST: CRIAR UM NOVO POST ---
-// Ouvimos o evento de "submit" (enviar) do formulário
 document.getElementById('post-form').addEventListener('submit', async (event) => {
     // Impede a página de recarregar ao clicar no botão
     event.preventDefault();
@@ -73,14 +70,13 @@ document.getElementById('post-form').addEventListener('submit', async (event) =>
                 'Content-Type': 'application/json',
                 'accept': '*/*'
             },
-            body: JSON.stringify(dadosDoFormulario) // Empacota os dados para enviar
+            body: JSON.stringify(dadosDoFormulario)
         });
 
         if (!response.ok) throw new Error('Erro ao criar post na API');
 
         alert('Post publicado com sucesso!');
 
-        // Limpa os campos do formulário para o próximo uso
         document.getElementById('post-form').reset();
 
         // Chama a função GET novamente para atualizar a lista na tela na mesma hora
@@ -97,7 +93,6 @@ async function deletePost(postId) {
     if (!confirm('Tem certeza que deseja deletar este post?')) return;
 
     try {
-        // Notem que a URL muda, nós enviamos o ID no final do link
         const response = await fetch(`${API_URL}/${postId}`, {
             method: 'DELETE',
             headers: {
@@ -118,6 +113,5 @@ async function deletePost(postId) {
     }
 }
 
-// --- INICIALIZAÇÃO ---
 // Assim que o arquivo carrega, nós chamamos a função para buscar os posts e preencher a tela
 getPosts();
