@@ -1,0 +1,24 @@
+{
+  "name": "desafio2-pet-a-bit",
+  "version": "1.0.0",
+  "description": "Repositório do Desafio 2 do processo seletívo da Seed-a-Bit para o grupo 3 (Pet-a-Bit)",
+  "main": "blog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nandospto/Desafio2-Pet-a-Bit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nandospto/Desafio2-Pet-a-Bit/issues"
+  },
+  "homepage": "https://github.com/nandospto/Desafio2-Pet-a-Bit#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
