@@ -4,35 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pag-contato.css">
+    <link rel="stylesheet" href="contato.css">
     <title>Nos Contate</title>
 </head>
 
 <body>
     <header>
-        <img class="PetabitHeaderLogo" src="src/PetabitheaderLogo.png">
+        <div class="logo">
+            <img class="PetabitHeaderLogo" src="src/PetabitheaderLogo.png" alt="Logo Pet-a-Bit">
+        </div>
+
         <nav class="menunavegacao">
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-
             <label for="menu-toggle" class="menu-btn">&#9776;</label>
-            <div class="menu-links-container">
-                <div class="menuContImg">
-                    <img class="imgpatinhas" src="/src/patinhas.png">
-                    <a class="HeaderLink" href="#">Início</a>
-                </div>
-                <div class="menuContImg">
-                    <img class="imgpatinhas" src="/src/patinhas.png">
-                    <a class="HeaderLink" href="#">Solução</a>
-                </div>
-                <div class="menuContImg">
-                    <img class="imgpatinhas" src="/src/patinhas.png">
-                    <a class="HeaderLink" href="#">Blog</a>
-                </div>
-                <div class="menuContImg">
-                    <img class="imgpatinhas" src="/src/patinhas.png">
+            
+            <ul class="menu-links-container">
+                <li class="menuContImg">
+                    <img class="imgpatinhas" src="src/patinhas.png" alt="">
+                    <a class="HeaderLink" href="src/paginaInicial.html">Início</a>
+                </li>
+                <li class="menuContImg">
+                    <img class="imgpatinhas" src="src/patinhas.png" alt="">
+                    <a class="HeaderLink" href="solucao.html">Solução</a>
+                </li>
+                <li class="menuContImg">
+                    <img class="imgpatinhas" src="src/patinhas.png" alt="">
+                    <a class="HeaderLink" href="blog.html">Blog</a>
+                </li>
+                <li class="menuContImg">
+                    <img class="imgpatinhas" src="src/patinhas.png" alt="">
                     <a class="HeaderLink" href="#">Contato</a>
-                </div>
-            </div>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -65,26 +68,22 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer-links">
-            <div class="footer-about">
-                <h4>Pet-a-Bit</h4>
-                <ul>
-                    <li><a href="#">Solução</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Saiba Mais</h4>
-                <div class="icons">
-                    <a><img src="src/Instagram.svg"></a>
-                    <a><img src="src/Youtube.svg"></a>
-                    <a><img src="src/Facebook.svg"></a>
-                </div>
-            </div>
+    <footer class="footer">
+    <div class="footer-links">
+        <p>Pet-a-Bit</p>
+        <a href="solucao.html">Solução</a>
+        <a href="blog.html">Blog</a>
+        <a href="contato.html">Contato</a>
+    </div>
+    <div class="footer-social">
+        <p>Saiba Mais</p>
+        <div class="social-icons">
+            <a href="https://instagram.com"><img src="src/Instagram.svg" alt="Ícone-Instagram"></a>
+            <a href="https://facebook.com"><img src="src/Facebook.svg" alt="Ícone-Facebook"></a>
+            <a href="https://youtube.com"><img src="src/Youtube.svg" alt="Ícone-Youtube"></a>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 
 </html>
