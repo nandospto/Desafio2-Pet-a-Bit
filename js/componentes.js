@@ -12,5 +12,5 @@ async function carregarComponente(idContainer, arquivoHtml) {
 }
 
 // Assim que a página abre, ele carrega o Header
-carregarComponente('header-container', 'header.html');
-carregarComponente('footer-container', 'footer.html');
+carregarComponente('header-container', 'componentes/header.html');
+carregarComponente('footer-container', 'componentes/footer.html');
